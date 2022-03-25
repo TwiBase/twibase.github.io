@@ -48,7 +48,7 @@
     <nav class="navbar navbar-expand-lg navbar-light">
   <a class="navbar-brand" href="/">
     <img src="/favicon/logo2-128.ico" width="30" height="30" alt="logo">
-    delicate主题
+    风吟数据库
   </a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -64,33 +64,6 @@
       </li>
       <li class="nav-item">
         <a class="nav-link" href="/about">アバウト</a>
-      </li>
-      
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-expanded="false">
-          友達
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          
-            
-          
-            
-            <a class="dropdown-item" target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>
-            
-          
-            
-            <div class="dropdown-divider"></div>
-            
-          
-            
-            <a class="dropdown-item" target="_blank" rel="noopener" href="https://github.com/">GitHub</a>
-            
-          
-            
-            <a class="dropdown-item" target="_blank" rel="noopener" href="https://gitlab.com/">GitLab</a>
-            
-          
-        </div>
       </li>
       
       
@@ -110,9 +83,6 @@
         </a>
       </li>
     </ul>
-    
-      <form class="form-inline my-2 my-lg-0">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="form-control mr-sm-2"><input type="search" name="q" class="form-control mr-sm-2-input" placeholder="Search"><input type="hidden" name="sitesearch" value="https://twibase.github.io"></form>
     
   </div>
 </nav>
@@ -378,6 +348,57 @@ jinrishici.load(function(result) {
 
 
 
+    <div class="shadow widget-weather">
+
+<div class="weather-today">
+    <h3>
+        <span id="weather-city" style="color: white;"></span>  
+        <svg t="1638325100834" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2324" width="24" height="24"><path d="M866.783524 192.308461l-37.390752 39.964431c33.654502 55.787014 53.021302 121.165808 53.021302 191.070815 0 94.347844-35.271373 180.456538-93.348462 245.858447l0.68397-0.012545-9.771168 9.881113c-3.035783 3.1805-6.127576 6.307064-9.274391 9.378508L631.017486 829.713124c0.064604-0.019263 0.128318-0.039513 0.191934-0.057887L512 949.559197 243.000077 678.099294l0.09651-0.000988c-62.919801-66.390721-101.518268-156.062796-101.518268-254.7546 0-204.580999 165.838804-370.415951 370.415951-370.415951 71.049106 0 137.420565 20.005429 193.798891 54.683416l36.807046-39.339335C676.254827 25.093024 597.058043 0 511.994172 0 278.20003 0 88.667851 189.541761 88.667851 423.343706c0 109.117012 41.295722 208.57764 109.094884 283.64176 0.916405 1.284963 1.959252 2.510063 3.141975 3.653174l3.632034 3.667695c4.47129 4.723976 9.044821 9.349565 13.728296 13.863332l243.990766 246.398589c0.545971 0.526708 1.114168 1.019633 1.693922 1.492307l47.946154 47.939437 45.578832-45.578832c1.289803-0.867211 2.522608-1.849307 3.672535-2.959622l261.351097-263.929616c1.469192-1.417134 2.725211-2.961499 3.783468-4.591805 67.774071-75.058292 109.050432-174.500645 109.050432-283.594443C935.331161 338.100446 910.132045 258.743535 866.783524 192.308461zM370.878945 405.70471c0 77.935925 63.179303 141.10851 141.10851 141.10851 77.935925 0 141.11908-63.172586 141.11908-141.10851 0-77.93306-63.183155-141.112363-141.11908-141.112363C434.058346 264.592348 370.878945 327.772638 370.878945 405.70471zM600.197153 405.70471c0 48.705396-39.493732 88.191325-88.201993 88.191325-48.712114 0-88.19903-39.486916-88.19903-88.191325 0-48.712114 39.486916-88.195177 88.19903-88.195177C560.703421 317.509533 600.197153 356.992597 600.197153 405.70471z" fill="#fff"></path></svg>
+    </h3>
+    <div class="wtt"><h1 id="weather-today-temp" style="color: white;"></h1><span>°C</span></div>
+    <div id="weather-today-high-low"></div>
+    <div id="weather-today-type"></div>
+    <div id="weather-today-wind"></div>
+</div>
+
+    <div class="weather-info">
+        <span class="weather-info-icon">
+            <svg viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="3348" width="24" height="24"><path fill="#eee" d="M257.493333 322.4l215.573334-133.056c24.981333-15.413333 57.877333-7.914667 73.493333 16.746667 5.301333 8.373333 8.106667 18.048 8.106667 27.914666v555.989334C554.666667 819.093333 530.784 842.666667 501.333333 842.666667c-9.994667 0-19.786667-2.773333-28.266666-8L257.493333 701.6H160c-41.237333 0-74.666667-33.013333-74.666667-73.738667V396.138667c0-40.725333 33.429333-73.738667 74.666667-73.738667h97.493333z m26.133334 58.4a32.298667 32.298667 0 0 1-16.96 4.8H160c-5.888 0-10.666667 4.714667-10.666667 10.538667v231.733333c0 5.813333 4.778667 10.538667 10.666667 10.538667h106.666667c5.994667 0 11.872 1.664 16.96 4.8L490.666667 770.986667V253.013333L283.626667 380.8zM800.906667 829.653333a32.288 32.288 0 0 1-45.248-0.757333 31.317333 31.317333 0 0 1 0.768-44.693333c157.653333-150.464 157.653333-393.962667 0-544.426667a31.317333 31.317333 0 0 1-0.768-44.682667 32.288 32.288 0 0 1 45.248-0.757333c183.68 175.306667 183.68 460.010667 0 635.317333z m-106.901334-126.186666a32.288 32.288 0 0 1-45.248-1.216 31.328 31.328 0 0 1 1.237334-44.672c86.229333-80.608 86.229333-210.56 0-291.178667a31.328 31.328 0 0 1-1.237334-44.672 32.288 32.288 0 0 1 45.248-1.216c112.885333 105.546667 112.885333 277.418667 0 382.965333z" p-id="3349"></path></svg>
+        </span>
+        <div class="weather-info-text">
+            <span>疫情期间，注意个人防护！</span>
+        </div>
+    </div>
+
+
+<script type="text/javascript">
+var city = "南京";
+const weatherCity = document.getElementById('weather-city');
+// weatherCity.innerText = city;
+const weatherTodayTemp = document.getElementById('weather-today-temp');
+const weatherTodayHL = document.getElementById('weather-today-high-low');
+const weatherTodayType = document.getElementById('weather-today-type');
+const weatherTodayWind = document.getElementById('weather-today-wind');
+
+var ajaxWeather = new XMLHttpRequest();
+ajaxWeather.open('get',"http://wthrcdn.etouch.cn/weather_mini?city=" + city,true);
+ajaxWeather.send();
+ajaxWeather.onreadystatechange = function(){
+    if(ajaxWeather.readyState == 4 && ajaxWeather.status == 200){
+        let weatherData = JSON.parse(ajaxWeather.responseText);
+        weatherCity.innerText = weatherData.data.city;
+        weatherTodayTemp.innerText = weatherData.data.wendu;
+        weatherTodayHL.innerText = weatherData.data.forecast[0].high.replace('高温','')+ ' / ' + weatherData.data.forecast[0].low.replace('低温','');
+        weatherTodayType.innerText = weatherData.data.forecast[0].type;
+        weatherTodayWind.innerText = weatherData.data.forecast[0].fengxiang +' - '+ weatherData.data.forecast[0].fengli.replace('<![CDATA[','').replace(']]>','');
+
+        // console.log(weatherData.data.forecast[0]); // 今天气象条件
+    }
+}
+</script>
+</div>
+
+
 
 
     <div class="shadow widget-music">
@@ -385,45 +406,33 @@ jinrishici.load(function(result) {
 
 
 
+    <h4 style="text-shadow: 2px 2px #ed1c24;">网易云音乐</h4>
+
+    
+        <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" 
+        width=100% 
+        height=86 
+        src="//music.163.com/outchain/player?type=2&id=1481390619&auto=0&height=66">
+    </iframe>
+    
+        <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" 
+        width=100% 
+        height=86 
+        src="//music.163.com/outchain/player?type=2&id=1481392260&auto=0&height=66">
+    </iframe>
+    
+        <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" 
+        width=100% 
+        height=86 
+        src="//music.163.com/outchain/player?type=2&id=1481390662&auto=0&height=66">
+    </iframe>
+    
 
 
 
-    <h4 style="text-shadow: 1px -1px #0eaf52,2px 2px #f8cc18;">QQ音乐</h4>
-    <div class="control-info">
-        <div id="qqMusic-info">点击右边播放...</div>
-        <div class="control">
-            <button id="play" class="btn btn-success">播放</button>
-            <button id="parse" class="btn btn-warning">暂停</button>
-        </div>
-    </div>
-    <div class="song-info">
-        <button id="prev" class="btn btn-sm btn-outline-primary">上一首</button>
-        <button id="next" class="btn btn-sm btn-outline-primary">下一首</button>
-    </div>
-<script src="//y.gtimg.cn/music/h5/player/player.js?max_age=2592000"></script>
-<script>
-const qqMusicInfo = document.getElementById('qqMusic-info');
-var player = new QMplayer();
-player.on("play", function (e) {
-    qqMusicInfo.innerText = e.song.name + ' - ' + e.song.singer[0].name;
-})
-const play = document.getElementById('play');
-const parse = document.getElementById('parse');
-const prev = document.getElementById('prev');
-const next = document.getElementById('next');
-play.addEventListener('click',()=>{
-    player.play("000iDpGB4NlS0D,004aupsp1RFXAN,0029dqHX0nuawd");
-})
-parse.addEventListener('click',()=>{
-    player.pause();
-})
-prev.addEventListener('click',()=>{
-    player.playPrev();
-})
-next.addEventListener('click',()=>{
-    player.playNext();
-})
-</script>
+
+
+
 
 
 </div>
@@ -436,16 +445,16 @@ next.addEventListener('click',()=>{
 <div class="shadow-sm sidebar-about">
     <div class="my-img">
         <div><img src="/favicon/logo2-128.ico" alt="Fluid-img"></div>
-        <span class="name">Kart · Jim</span>
+        <span class="name">TwiBase - 风吟数据库</span>
     </div>
-    <div class="my-logo">Time wait for no one.</div>
+    <div class="my-logo">听凭风引，且听风吟。</div>
     <div class="my-tag">
         
-            <span>student</span>
+            <span>Student</span>
         
-            <span>front-end developer</span>
+            <span>Developer</span>
         
-            <span>hexo-theme-delicate</span>
+            <span>Traveller</span>
         
     </div>
     <div class="my-division">
@@ -455,50 +464,10 @@ next.addEventListener('click',()=>{
     <div class="my-social-account">
         
 
-    <div class="icon-box" data-toggle="tooltip" data-placement="bottom" title="Github">
-        <a href="#">
-            <svg class="icon" aria-hidden="true">
-                <use xlink:href="#icon-github"></use>
-            </svg>
-        </a>
-    </div>
-
-
-    <div class="icon-box" data-toggle="tooltip" data-placement="bottom" title="twitter">
-        <a href="#">
-            <svg class="icon" aria-hidden="true">
-                <use xlink:href="#icon-tuite"></use>
-            </svg>
-        </a>
-    </div>
 
 
 
-    <div class="icon-box" data-toggle="tooltip" data-placement="bottom" title="CodePen">
-        <a href="#">
-            <svg class="icon" aria-hidden="true">
-                <use xlink:href="#icon-codepen"></use>
-            </svg>
-        </a>
-    </div>
 
-
-    <div class="icon-box" data-toggle="tooltip" data-placement="bottom" title="Google">
-        <a href="#">
-            <svg class="icon" aria-hidden="true">
-                <use xlink:href="#icon-google"></use>
-            </svg>
-        </a>
-    </div>
-
-
-    <div class="icon-box" data-toggle="tooltip" data-placement="bottom" title="facebook">
-        <a href="#">
-            <svg class="icon" aria-hidden="true">
-                <use xlink:href="#icon-facebookfacebook52"></use>
-            </svg>
-        </a>
-    </div>
 
 
 
@@ -572,7 +541,7 @@ $(document).ready(function() {
 <script src="/js/index.js"></script>
 
 <script>
-    calculateTime("2021-11-01T00:00:00");
+    calculateTime("2022-03-25T20:00:00");
 </script>
 
 
@@ -583,11 +552,6 @@ $(document).ready(function() {
 
 
 
-
-<script src='https://unpkg.com/mermaid@8.8.0/dist/mermaid.min.js'></script>
-<script>
-    mermaid.initialize({startOnLoad:true});
-</script>
 
 
 
