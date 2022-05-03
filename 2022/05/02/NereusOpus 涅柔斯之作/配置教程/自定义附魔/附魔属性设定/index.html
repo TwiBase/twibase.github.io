@@ -1,0 +1,71 @@
+<!DOCTYPE html><html lang="zh_cn"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>附魔属性设定 | TwiBase - 风吟数据库</title><script>var config = {"hostname":"https://twibase.github.io","root":"/","preload":false,"path":""}</script><link rel="stylesheet" href="/css/arknights.css"><link rel="stylesheet" href="//unpkg.com/@highlightjs/cdn-assets@11.4.0/styles/atom-one-dark-reasonable.min.css"><style>@font-face {
+ font-family: BenderLight;
+ src: local('Bender'), url("/font/BenderLight.ttf");
+}
+@font-face {
+ font-family: 'JetBrains Mono';
+ src: local('JetBrains Mono'), url('/font/JetBrainsMono-Regular.woff2') format('woff2');
+}</style><meta name="generator" content="Hexo 6.0.0"></head><body style="background-image:url(https://ak.hypergryph.com/assets/index/images/ak/pc/bk.jpg);"><div id="cursor-container"><div id="cursor-outer"></div><div id="cursor-effect"></div></div><main><header><nav><div class="navBtn"><i class="navBtnIcon"><span class="navBtnIconBar"></span><span class="navBtnIconBar"></span><span class="navBtnIconBar"></span></i></div><ol class="navContent"><li class="navItem search-header"><input autocomplete="off" autocorrect="off" autocapitalize="none" placeholder="数据检索" spellcheck="false" maxlength="50" type="text" id="search-input"></li><li class="navItem"><a href="/"><span class="navItemTitle">Home</span></a></li><li class="navItem"><a href="/archives/"><span class="navItemTitle">Archives</span></a></li></ol></nav><div class="search-popup"><div id="search-result"></div></div></header><article><div id="post-bg"><div id="post-title"><h1>附魔属性设定</h1><div id="post-info"><span>First Post:<span class="control"><time datetime="2022-05-01T19:32:46.264Z" id="date"> 2022-05-02</time></span></span><br><span>Last Update:<span class="control"><time datetime="2022-05-03T15:03:07.000Z" id="updated"> 2022-05-03</time></span></span></div></div><hr><div id="post-content"><p>在<code>plugins/NereusOpus/enchantments/.../具体附魔名称.yml</code>中，包含了对该项附魔的具体配置。以下为例：</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><code class="hljs json"><br>enabled<span class="hljs-punctuation">:</span> <span class="hljs-keyword">true</span><br>name<span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;abrasion&quot;</span><br>displayName<span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;牵连&quot;</span><br>description<span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;可以附在剑和斧上，使其在攻击时损坏敌人盔甲&quot;</span><br>maxLevel<span class="hljs-punctuation">:</span> <span class="hljs-number">2</span><br>rarity<span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;uncommon&quot;</span><br>grindstoneable<span class="hljs-punctuation">:</span> <span class="hljs-keyword">true</span><br>limits<span class="hljs-punctuation">:</span><br>  targets<span class="hljs-punctuation">:</span><br>  - <span class="hljs-string">&quot;sword&quot;</span><br>  - <span class="hljs-string">&quot;axe&quot;</span><br>  conflicts<span class="hljs-punctuation">:</span> <span class="hljs-punctuation">[</span><span class="hljs-punctuation">]</span><br>  neededEnchants<span class="hljs-punctuation">:</span> <span class="hljs-punctuation">[</span><span class="hljs-punctuation">]</span><br>  withLore<span class="hljs-punctuation">:</span> <span class="hljs-punctuation">[</span><span class="hljs-punctuation">]</span><br>  withoutLore<span class="hljs-punctuation">:</span> <span class="hljs-punctuation">[</span><span class="hljs-punctuation">]</span><br>  withName<span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;&quot;</span><br>  withoutName<span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;&quot;</span><br>  permission<span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;&quot;</span><br>  papi<span class="hljs-punctuation">:</span> <span class="hljs-punctuation">[</span><span class="hljs-punctuation">]</span><br>params<span class="hljs-punctuation">:</span><br>  allow-not-fully-charged<span class="hljs-punctuation">:</span> <span class="hljs-keyword">false</span><br></code></pre></td></tr></table></figure>
+<h2 id="基础设定"><a href="#基础设定" class="headerlink" title="基础设定"></a>基础设定</h2><ul>
+<li><p><code>enabled</code>即是否启用该附魔；</p>
+<blockquote>
+<p>针对不同服务器的玩法类型，请合理设置可用附魔。<br>针对对平衡性构成较大威胁的附魔，请及时关闭，以免给您带来不必要的损失。<br>{.is-warning}</p>
+</blockquote>
+</li>
+<li><p><code>name</code>即附魔内部存储名；</p>
+<blockquote>
+<p>在其它配置文件内均需要此名称代指此附魔。<br>{.is-info}</p>
+</blockquote>
+</li>
+<li><p><code>displayName</code>：该项附魔显示名；</p>
+</li>
+<li><p><code>description</code>：该项附魔的描述；</p>
+</li>
+<li><p><code>maxLevel</code>：该项附魔的最高等级；</p>
+</li>
+</ul>
+<blockquote>
+<p>在未确定后果的情况下，请不要在游戏中使用超出等级的附魔。<br>{.is-warning}</p>
+</blockquote>
+<ul>
+<li><p><code>rarity</code>即为该项附魔的品质，详见[附魔品质设定](&#x2F;NereusOpus\ 涅柔斯之作&#x2F;配置教程&#x2F;自定义附魔&#x2F;附魔品质设定)；</p>
+</li>
+<li><p><code>grindstoneable</code>：该项附魔是否可被砂轮祛魔；</p>
+<h2 id="限制性设定"><a href="#限制性设定" class="headerlink" title="限制性设定"></a>限制性设定</h2><p><code>limits</code>项中主要为该项附魔的限制性设置。</p>
+</li>
+<li><p><code>targets</code>即该项附魔可产生效用的物品类，详见[附魔对象类设定](&#x2F;NereusOpus\ 涅柔斯之作&#x2F;配置教程&#x2F;自定义附魔&#x2F;附魔对象类设定)；</p>
+</li>
+<li><p><code>conflicts</code>：该项附魔冲突的附魔；</p>
+</li>
+<li><p><code>neededEnchants</code>即为该项附魔所需的前置附魔；</p>
+<blockquote>
+<p>此处填写附魔的内部存储名。<br>{.is-info}</p>
+</blockquote>
+</li>
+<li><p><code>withLore</code>与<code>withoutLore</code>即为该项附魔所需要&#x2F;排除的Lore内容集；</p>
+<blockquote>
+<p>  在设定该项并实装后，玩家使用附魔时，NereusOpus将检测该附魔物品是否包含&#x2F;不包含该集合中的Lore（<strong>对颜色代码不作判定</strong>），并根据对比情况确认附魔是否生效。<br>{.is-info}</p>
+</blockquote>
+</li>
+<li><p><code>withName</code>与<code>withoutName</code>即为该项附魔所需要&#x2F;排除的物品名；</p>
+<blockquote>
+<p>在设定该项并实装后，玩家使用附魔时，NereusOpus将检测该附魔物品是否包含&#x2F;不包含该名称（<strong>对颜色代码不作判定</strong>）并根据对比情况确认附魔是否生效。<br>{.is-info}</p>
+</blockquote>
+</li>
+<li><p><code>permission</code>即为使该项附魔产生效用所需要的权限设定；</p>
+</li>
+</ul>
+<blockquote>
+<p>在设定该项并实装后，<strong>仅拥有对应权限的玩家才可使用该附魔</strong>。<br>{.is-info}</p>
+</blockquote>
+<ul>
+<li><p><code>papi</code>即该项附魔的限制性PAPI变量，在有关PAPI变量符合该项条件时该项附魔才可产生效用；</p>
+<blockquote>
+<p>  在设定该项并实装后，该附魔仅在使用时符合<strong>所有在此设定的表达式</strong>才可生效。<br>{.is-info}</p>
+</blockquote>
+</li>
+<li><p><code>params</code>下参数均为各项附魔的详细参数。</p>
+</li>
+</ul>
+<div id="paginator"></div></div><div id="post-footer"><div id="pages"><div id="footer-link" style="right: calc(50% - 1px);order: 1;border-right: 1px solid #fe2;padding-left: unset;max-width: calc(50% - 4px);"><a href="/2022/05/02/NereusOpus%20%E6%B6%85%E6%9F%94%E6%96%AF%E4%B9%8B%E4%BD%9C/%E9%85%8D%E7%BD%AE%E6%95%99%E7%A8%8B/%E8%87%AA%E5%AE%9A%E4%B9%89%E7%95%8C%E9%9D%A2/%E4%B8%BB%E7%95%8C%E9%9D%A2/">← Next 自定义主界面</a></div><div id="footer-link" style="left: 50%;order: 0;border-left: 1px solid #fe2;padding-right: unset;max-width: calc(50% - 5px);"><a href="/2022/05/02/NereusOpus%20%E6%B6%85%E6%9F%94%E6%96%AF%E4%B9%8B%E4%BD%9C/%E9%85%8D%E7%BD%AE%E6%95%99%E7%A8%8B/%E8%87%AA%E5%AE%9A%E4%B9%89%E9%99%84%E9%AD%94/%E9%99%84%E9%AD%94%E5%AF%B9%E8%B1%A1%E7%B1%BB%E8%AE%BE%E5%AE%9A/">附魔对象类设定 Prev →</a></div></div></div></div><div id="bottom-btn"><a id="to-top" onClick="index.scrolltop();" title="to top" style="opacity: 0; display: none;">∧</a></div></article><div class="aside-box"><aside><div id="aside-top"><div id="about"><a href="/" id="logo"><img src="https://ak.hypergryph.com/assets/index/images/ak/pc/faction/1.png" alt="Logo"></a><h1 id="Dr"><a href="/">TwiBase</a></h1><div id="description"><p>听凭风引，且听风吟</p></div><!--if page.published === undefined--><section id="total"><a id="total-archives" href="/archives"><span class="total-title">Archives Total:</span><span class="total-number">15</span></a><div id="total-tags"><span class="total-title">Tags:</span><span class="total-number">0</span></div><div id="total-categories"><span class="total-title">Categories:</span><span class="total-number">0</span></div></section></div><div id="aside-block"><div id="toc-div"><h1>INDEX</h1><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9F%BA%E7%A1%80%E8%AE%BE%E5%AE%9A"><span class="toc-number">1.</span> <span class="toc-text">基础设定</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%99%90%E5%88%B6%E6%80%A7%E8%AE%BE%E5%AE%9A"><span class="toc-number">2.</span> <span class="toc-text">限制性设定</span></a></li></ol></div></div></div><footer><nobr><span class="text-title">©</span><span class="text-content">1970 to 2020</span></nobr><br><nobr><span class="text-title">ICP</span><span class="text-content">——备案号——</span></nobr><br><nobr><span class="text-title">Role</span><span class="text-content">Administrator</span></nobr><br><text>published with <a target="_blank" rel="noopener" href="http://hexo.io">Hexo</a></text><text> Theme <a target="_blank" rel="noopener" href="https://github.com/Yue-plus/hexo-theme-arknights">Arknight</a></text><wbr><text>by <a target="_blank" rel="noopener" href="https://github.com/Yue-plus">Yue_plus</a></text></footer></aside></div></main><canvas id="canvas-dust"></canvas><script src="/js/search.js"></script><script>const reset=_=>{}</script><script src="//unpkg.com/@highlightjs/cdn-assets@11.4.0/highlight.min.js"></script><script src="/js/arknights.js"></script><script>document.addEventListener("load",reset())</script></body></html>
